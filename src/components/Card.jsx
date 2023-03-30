@@ -14,7 +14,7 @@ const Card = ({ player }) => {
         <p>Breed: {player.breed}</p>
       </div>
       <img src={player.imageUrl} alt={player.breed} className='puppy-photo' />
-      <button id='see-all' onClick={() => navigate('/', { replace: true })}>
+      <button id='see-all' onClick={() => navigate('/')}>
         Back to all players
       </button>
     </div>
