@@ -5,10 +5,14 @@
   align-items: center;
   gap: 20px;
   h1 {
-    color: #fff;
-    font-family: 'Hanalei', cursive;
-    font-size: 64px;
-    margin-bottom: 10px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Hanalei', cursive;
+      font-size: 64px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
   }
   form {
     display: flex;
@@ -84,6 +88,7 @@
       font-style: italic;
     }
   }
+
   .team-info {
     display: flex;
     justify-content: space-between;
@@ -102,6 +107,40 @@
     &:hover {
       background-color: rgb(247, 203, 93);
       color: #fff;
+    }
+  }
+}
+
+.player-detail {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    min-width: 250px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .teammate {
+    margin-top: 20px;
+    a {
+      display: block;
+      color: inherit;
+      text-align: center;
+      text-decoration: none;
+      font-size: 24px;
+      background-color: #fff;
+      padding: 5px 20px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
     }
   }
 }
