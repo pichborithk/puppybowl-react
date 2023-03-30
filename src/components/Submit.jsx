@@ -13,7 +13,7 @@ const Submit = ({ handleSubmit }) => {
         await handleSubmit(event, name, breed);
         setName('');
         setBreed('');
-        navigate(`/`, { replace: true });
+        navigate('/');
       }}
     >
       <label htmlFor='name'>Name:</label>
