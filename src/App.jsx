@@ -1,9 +1,11 @@
-import { Routes, Route } from 'react-router-dom';
-import CardList from './components/CardList';
-import Card from './components/Card';
-import Submit from './components/Submit';
-import './scss/app.scss';
+import { Routes, Route, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+
+import Submit from './components/Submit';
+import CardList from './components/CardList';
+import PlayerDetail from './components/PlayerDetail';
+
+import './scss/app.scss';
 
 const cohortName = import.meta.env.VITE_COHORT_NAME;
 const API_URL = `${import.meta.env.VITE_API_URL}/${cohortName}`;
@@ -96,14 +98,16 @@ const App = () => {
 
   return (
     <div className='App'>
-      <h1>PuppyBowl</h1>
+      <h1>
+        <Link to='/'>PuppyBowl</Link>
+      </h1>
       <Submit handleSubmit={handleSubmit} />
       <Routes>
         <Route
           path='/'
           element={<CardList players={players} removePlayer={removePlayer} />}
         />
-        <Route path='/players/:playerId' element={<Card />} />
+        <Route path='/players/:playerId' element={<PlayerDetail />} />
       </Routes>
     </div>
   );
