@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
 import CardList from './components/CardList';
+import Card from './components/Card';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
       { index: true, element: <CardList /> },
       {
         path: 'players/:playerId',
-        // element: <Card />,
+        element: <Card />,
       },
     ],
   },
