@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import './App.css';
 import Submit from './components/Submit';
+import './scss/app.scss';
 
 const App = () => {
   return (
