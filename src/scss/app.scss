@@ -1,0 +1,107 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  h1 {
+    color: #fff;
+    font-family: 'Hanalei', cursive;
+    font-size: 64px;
+    margin-bottom: 10px;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 1px 0px 5px #ffffff;
+    color: #fff;
+    * {
+      font-size: 20px;
+    }
+    label {
+      margin-right: 10px;
+    }
+    input {
+      padding: 5px 10px;
+      margin-right: 30px;
+      border: none;
+      box-shadow: 1px 1px 5px #2f2f2f;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      padding: 5px 10px;
+    }
+  }
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding: 10px 20px;
+    .player-card {
+      flex-basis: 200px;
+      flex-grow: 1;
+      &:hover {
+        transform: translateY(-8px);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+
+.player-card {
+  box-shadow: 1px 4px 10px rgb(98, 98, 98);
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  cursor: pointer;
+  .header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 18px;
+    p {
+      margin: 5px;
+    }
+    .pup-title {
+      font-size: x-large;
+    }
+    .pup-number {
+      font-style: italic;
+    }
+  }
+  .team-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  img {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    margin: 10px 0px;
+  }
+  button {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover {
+      background-color: rgb(247, 203, 93);
+      color: #fff;
+    }
+  }
+}
