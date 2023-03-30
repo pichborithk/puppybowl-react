@@ -16,9 +16,7 @@ const CardList = ({ players, removePlayer }) => {
               src={player.imageUrl}
               alt={player.breed}
               className='puppy-photo'
-              onClick={() =>
-                navigate(`/players/${player.id}`, { replace: true })
-              }
+              onClick={() => navigate(`/players/${player.id}`)}
             />
             <button
               className='remove-button'
