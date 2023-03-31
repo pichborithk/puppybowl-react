@@ -1,7 +1,34 @@
 import { useNavigate } from 'react-router-dom';
 
-const CardList = ({ players, removePlayer }) => {
+const cohortName = import.meta.env.VITE_COHORT_NAME;
+const API_URL = `${import.meta.env.VITE_API_URL}/${cohortName}`;
+
+const CardList = ({ players, setPlayers }) => {
   const navigate = useNavigate();
+
+  const removePlayer = async (playerId) => {
+    try {
+      const response = await fetch(`${API_URL}/players/${playerId}`, {
+        method: 'DELETE',
+      });
+      const result = await response.json();
+      if (result.error) throw result.error;
+      console.log('Success remove');
+    } catch (error) {
+      console.error(
+        `Whoops, trouble removing player #${playerId} from the roster!`,
+        err
+      );
+    }
+    try {
+      const response = await fetch(`${API_URL}/players`);
+      const result = await response.json();
+      if (result.error) throw result.error;
+      setPlayers(result.data.players);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className='card-list'>
